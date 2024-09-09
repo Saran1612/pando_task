@@ -1,0 +1,45 @@
+.vertical-line {
+  border-left: 2px solid #325164;  /* Adjust thickness and color */
+  height: 60px;                 /* Adjust height */
+  margin: 0 30px;                /* Optional margin */
+}
+
+.vertical-line_two{
+  border-left: 2px solid #E9F1F5;
+  height: 42px;
+  margin: 0 30px;
+}
+
+.drawer .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiDrawer-paper{
+  top: 9rem;
+  background-color: #EBF1FA;
+  margin: 0 10px 10px 10px;
+  border: none;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.accordions{
+  --Paper-shadow:none !important;
+}
+
+.accordions .css-nt424e-MuiPaper-root-MuiAccordion-root::before{
+  height: 0 !important;
+}
+
+.steppers .css-15rfbsb-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed{
+  color: #008D5E;
+}
+
+.steppers .MuiStepLabel-label{
+  font-weight: 600 !important;
+}

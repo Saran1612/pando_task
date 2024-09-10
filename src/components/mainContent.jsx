@@ -8,6 +8,7 @@ import RightDrawer from './rightDrawer';
 import { SearchBar } from './searchbar';
 import { Grid } from '@mui/material';
 import Dropdown from './dropdown';
+import CollapseTable from './table';
 
 const menuItems = [
     {
@@ -58,7 +59,7 @@ export const MainContent = () => {
                     </div>
                 </div>
 
-                <div className="border-dashed">
+                <div className="border-dashed hover:bg-[#99b1c515]">
                     <div>
                         <span className="text-[14px] font-medium text-[#1FCD93] pl-[11px]">
                             Lane Creation
@@ -108,6 +109,10 @@ export const MainContent = () => {
                             </div>
                         </Grid>
                     </Grid>
+                </div>
+
+                <div className='my-[30px]'>
+                    <CollapseTable />
                 </div>
             </div>
 

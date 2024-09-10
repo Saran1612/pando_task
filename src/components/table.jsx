@@ -11,6 +11,9 @@ import {
 import { makeStyles } from "@mui/styles";
 import Checkbox from "@mui/material/Checkbox";
 import ViewWeekOutlinedIcon from '@mui/icons-material/ViewWeekOutlined';
+import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import FlightOutlinedIcon from '@mui/icons-material/FlightOutlined';
+import DirectionsBoatOutlinedIcon from '@mui/icons-material/DirectionsBoatOutlined';
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -33,7 +36,7 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, mtype, ctype, dtype, budget, ship, travelRoute,book) {
+function createData(name, mtype, ctype, dtype, budget, ship, travelRoute,icons) {
   return {
     name,
     mtype,
@@ -42,7 +45,7 @@ function createData(name, mtype, ctype, dtype, budget, ship, travelRoute,book) {
     budget,
     ship,
     travelRoute,
-    book,
+    icons
   };
 }
 
@@ -54,27 +57,36 @@ const rows = [
     "FCL | 20 Standard Dry",
     "$3,500 | $3,410",
     "2",
-    "Lithuania - Las Vegas"
+    "Lithuania - Las Vegas",
+    <div className="w-[35px] h-[35px] rounded-[50%] bg-[#FDF3DA] flex justify-center items-center mr-[10px]">
+        <LocalShippingOutlinedIcon className="text-[#422500]"/>
+    </div>
   ),
 
   createData(
     "SHNY78",
-    "PORT TO PORT",
+    "Port to Port",
     "Per Container | 3 Container",
     "FCL | 20 Standard Dry",
     "$3,500 | $3,410",
     "2",
-    "Lithuania - Las Vegas"
+    "Lithuania - Las Vegas",
+    <div className="w-[35px] h-[35px] rounded-[50%] bg-[#D7EFFD] flex justify-center items-center mr-[10px]">
+        <FlightOutlinedIcon className="text-[#164367]"/>
+    </div>
   ),
 
   createData(
     "HKTY01",
-    "PORT TO PORT",
+    "Port to Port",
     "Per Container | 3 Container",
     "FCL | 20 Standard Dry",
     "$3,500 | $3,410",
     "2",
-    "Lithuania - Las Vegas"
+    "Lithuania - Las Vegas",
+    <div className="w-[35px] h-[35px] rounded-[50%] bg-[#E2F6F8] flex justify-center items-center mr-[10px]">
+        <DirectionsBoatOutlinedIcon className="text-[#0F6C6F]"/>
+    </div>
   ),
 ];
 
@@ -87,7 +99,7 @@ export default function CollapseTable() {
         <Table
           className={`${classes.table} table-container`}
           aria-label="simple table"
-          style={{ tableLayout: "fixed" }}
+          style={{ tableLayout: "fixed",overflow:"scroll" }}
         >
           <TableHead>
             <TableRow>
@@ -99,6 +111,7 @@ export default function CollapseTable() {
                   </span>
                 </div>
               </TableCell>
+              
               <TableCell align="left">
                 <div className="outer-content-wrap-head">MOVEMENT TYPE</div>
               </TableCell>
@@ -130,14 +143,19 @@ export default function CollapseTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {rows.map((row) => {
+                console.log(row,"check ind row")
+                // let Iconss = row.icons;
+                return(
               <TableRow key={row.name}>
                 <TableCell
                   className={`${classes.sticky} table-horizontal-head`}
                 >
                   <div className="outer-content-wrap ">
+                      
+                        {/* <Iconss/> */}{row.icons}
+                      
                     <div className="inner-content-wrap flex flex-col">
-                      {/* <FireTruckIcon className="horizontal-head-icon" /> */}
                       <span className="route-head-info">{row.name}</span>
                       <div>{row.travelRoute}</div>
                     </div>
@@ -169,7 +187,8 @@ export default function CollapseTable() {
                   </div>
                 </TableCell>
               </TableRow>
-            ))}
+                )
+})}
           </TableBody>
         </Table>
       </TableContainer>

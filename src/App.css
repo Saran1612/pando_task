@@ -118,6 +118,7 @@
 }
 .table-container .MuiTableCell-root {
   border-bottom: none !important;
+  padding: 10px;
 }
 
 .table-container .fixed-gap {
@@ -126,7 +127,7 @@
 
 .outer-content-wrap {
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 15px;
   min-height: 60px;
   display: flex;
   align-items: center;

@@ -14,7 +14,7 @@ const openedMixin = (theme) => ({
         duration: theme.transitions.duration.enteringScreen,
     }),
     overflowX: 'hidden',
-    right: 0,  // Align the drawer to the right when opened
+    right: 0,
 });
 
 const closedMixin = (theme) => ({
@@ -23,8 +23,8 @@ const closedMixin = (theme) => ({
         duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: 0,  // Set width to 0 to make it disappear
-    right: 0,  // Keep it aligned to the right
+    width: 0,
+    right: 0,
 });
 
 const Drawer = styled(MuiDrawer, {

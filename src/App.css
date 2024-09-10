@@ -46,7 +46,8 @@
   --Paper-shadow:none !important;
 }
 
-.accordions .css-nt424e-MuiPaper-root-MuiAccordion-root::before,.css-nt424e-MuiPaper-root-MuiAccordion-root::before{
+.accordions .css-nt424e-MuiPaper-root-MuiAccordion-root::before,.css-nt424e-MuiPaper-root-MuiAccordion-root::before,
+.accordions .css-zd78gh::before {
   height: 0 !important;
 }
 

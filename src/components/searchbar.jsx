@@ -4,7 +4,6 @@ import FormControl from '@mui/material/FormControl';
 import SearchIcon from '@mui/icons-material/Search';
 import Input from '@mui/material/Input';
 
-
 export const SearchBar = () => {
     return (
         <div className='w-full'>

@@ -70,7 +70,7 @@ export default function ReusableMenu({ buttonText, menuItems, bg }) {
                 onClick={handleClick}
                 endIcon={<KeyboardArrowDownIcon />}
                 sx={{ backgroundColor: `#${bg}`, color: "#616161" }}
-                className='!font-bold !capitalize !rounded-[20px] !border menu-buttons '
+                className='!font-bold !capitalize !rounded-[20px] !border menu-buttons !text-[12px]'
             >
                 {buttonText}
             </Button>

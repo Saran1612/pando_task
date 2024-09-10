@@ -125,7 +125,6 @@ export const Steppers = () => {
                             </div>
                         ))
                     }
-
                 </Step>
             ))}
         </Stepper>

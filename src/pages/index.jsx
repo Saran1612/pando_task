@@ -6,7 +6,7 @@ import MiniDrawer from '../components/drawer';
 export const Lane = () => {
     const breadcrumbItems = [
         { label: 'Sourcing Events', link: '/' },
-        { label: 'AIR 009' }, // No link, it's the current page
+        { label: 'AIR 009' },
     ];
     return (
         <div>

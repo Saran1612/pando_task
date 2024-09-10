@@ -12,10 +12,10 @@ export const Accordions = () => {
         <div>
             <Accordion defaultExpanded className='accordions !bg-transparent'>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
+                    expandIcon={<ExpandMoreIcon className="stepper-svg" />}
                     aria-controls="panel1-content"
                     id="panel1-header"
-                    className='font-medium'
+                    className='font-medium hover:!text-[#0076DD] '
                 >
                     Sourcing Event
                 </AccordionSummary>
@@ -33,8 +33,7 @@ export const Accordions = () => {
                     Bidding & Negotiation
                 </AccordionSummary>
                 <AccordionDetails>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    Lorem ipsum dolor
                 </AccordionDetails>
             </Accordion>
             <Accordion className='accordions !bg-transparent'>
@@ -47,8 +46,7 @@ export const Accordions = () => {
                     Allocation & Awarding
                 </AccordionSummary>
                 <AccordionDetails>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    Lorem ipsum dolor
                 </AccordionDetails>
             </Accordion>
             <Accordion className='accordions !bg-transparent'>
@@ -61,8 +59,7 @@ export const Accordions = () => {
                     Contract & Update
                 </AccordionSummary>
                 <AccordionDetails>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    Lorem ipsum
                 </AccordionDetails>
             </Accordion>
         </div>

@@ -14,8 +14,8 @@ export const Collapses = ({ handleDrawerOpen, handleDrawerClose }) => {
     return (
         <>
             <DrawerHeader className='!px-[1rem] bg-[#EBF1FA] !flex !justify-between !items-center drawer_header'>
-                <div className='!cursor-default text-[#0076DD] font-medium'>AIR 009</div>
-                <div onClick={handleDrawerClose} className='!cursor-pointer text-[#6D8EB4] font-medium '>COLLAPSE</div>
+                <div className='!cursor-default text-[#0076DD] font-medium text-[14px]'>AIR 009</div>
+                <div onClick={handleDrawerClose} className='text-[14px] !cursor-pointer text-[#6D8EB4] font-medium '>COLLAPSE</div>
             </DrawerHeader>
             <List className='flex justify-center items-center bg-[#EBF1FA]'>
                 <ListItem disablePadding sx={{ display: 'block' }}>

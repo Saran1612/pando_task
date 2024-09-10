@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
 .vertical-line {
   border-left: 2px solid #325164;  /* Adjust thickness and color */
   height: 60px;                 /* Adjust height */
@@ -11,10 +18,16 @@
 }
 
 .drawer .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiDrawer-paper{
-  top: 9rem;
   background-color: #EBF1FA;
-  margin: 0 10px 10px 10px;
   border: none;
+  position: relative;
+  height: 100%;
+}
+
+.right-drawer .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiDrawer-paper{
+  border: none;
+  position: relative;
+  height: 100%;
 }
 
 .vertical-text {
@@ -26,13 +39,14 @@
   align-items: center;
   width: 100%;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .accordions{
   --Paper-shadow:none !important;
 }
 
-.accordions .css-nt424e-MuiPaper-root-MuiAccordion-root::before{
+.accordions .css-nt424e-MuiPaper-root-MuiAccordion-root::before,.css-nt424e-MuiPaper-root-MuiAccordion-root::before{
   height: 0 !important;
 }
 
@@ -42,4 +56,40 @@
 
 .steppers .MuiStepLabel-label{
   font-weight: 600 !important;
+}
+
+.steppers .css-1hv8oq8-MuiStepLabel-label.Mui-active{
+  color: #005399 !important;
+  font-size: 14px !important;
+}
+
+.steppers .css-18ltxn-MuiStepConnector-line{
+  border-left-style: dashed;
+}
+
+
+.steppers .css-1hv8oq8-MuiStepLabel-label{
+  color: #404040 !important;
+  font-size: 14px !important;
+}
+
+.border-left{
+  border-left: 1px solid #CBD4D8;
+}
+
+.accordions:hover .stepper-svg{
+  color: #0076DD;
+  fill: #0076DD;
+}
+
+
+.accordions .MuiButtonBase-root.MuiAccordionSummary-root:hover {
+  background-color: #D7EFFD;
+  border-radius: 5px;
+}
+
+.border-dashed{
+  border: 1px dashed #B5C3CB;
+  padding: 10px 8px;
+  border-radius: 5px;
 }

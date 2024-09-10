@@ -18,7 +18,7 @@ export const Lane = () => {
                     <div class="vertical-line vertical-line_two"></div>
                     <Buttons
                         onClick={() => { }}
-                        className=""
+                        className="text-[14px]"
                         text="INITIATE EVENT"
                     />
                 </div>

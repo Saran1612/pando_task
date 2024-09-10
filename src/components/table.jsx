@@ -1,5 +1,4 @@
 import React from "react";
-import FireTruckIcon from "@mui/icons-material/FireTruck";
 import {
   Table,
   TableBody,
@@ -25,14 +24,9 @@ const useStyles = makeStyles({
     position: "sticky",
     left: 0,
     background: "white",
-    width:300,
-    minWidth: 300,
+    width:250,
+    minWidth: 250,
     maxWidth: 800,
-  },
-  container: {
-    width:"100%",
-    minWidth: 500,
-    overflowX: 'auto', // Allows for horizontal scrolling
   },
 });
 
@@ -90,16 +84,16 @@ const rows = [
   ),
 ];
 
-export default function CollapseTable() {
+export default function CollapseTable({openRight,openLeft}) {
   const classes = useStyles();
 
   return (
     <>
-      <TableContainer className={classes.container}>
+      <TableContainer style={{width: openRight & openLeft ? "45vw" : "100%" }} >
         <Table
           className={`${classes.table} table-container`}
           aria-label="simple table"
-          style={{ tableLayout: "fixed",overflow:"scroll" }}
+          style={{ tableLayout: "fixed",overflow:"scroll",width: openRight & openLeft ? "70vw" : "100%" }}
         >
           <TableHead>
             <TableRow>
@@ -144,17 +138,13 @@ export default function CollapseTable() {
           </TableHead>
           <TableBody>
             {rows.map((row) => {
-                console.log(row,"check ind row")
-                // let Iconss = row.icons;
                 return(
               <TableRow key={row.name}>
                 <TableCell
                   className={`${classes.sticky} table-horizontal-head`}
                 >
                   <div className="outer-content-wrap ">
-                      
-                        {/* <Iconss/> */}{row.icons}
-                      
+                      {row.icons}
                     <div className="inner-content-wrap flex flex-col">
                       <span className="route-head-info">{row.name}</span>
                       <div>{row.travelRoute}</div>

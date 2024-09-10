@@ -6,9 +6,9 @@
 }
 
 .vertical-line {
-  border-left: 2px solid #325164; /* Adjust thickness and color */
-  height: 60px; /* Adjust height */
-  margin: 0 30px; /* Optional margin */
+  border-left: 2px solid #325164;
+  height: 60px;
+  margin: 0 30px;
 }
 
 .vertical-line_two {
@@ -136,7 +136,6 @@
 
 .outer-content-wrap-head {
   width: 100%;
-  /* padding: 10px 20px; */
   min-height: 60px;
   display: flex;
   align-items: start;

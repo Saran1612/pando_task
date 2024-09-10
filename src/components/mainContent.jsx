@@ -7,7 +7,6 @@ import FileCopyIcon from "@mui/icons-material/FileCopy";
 import RightDrawer from "./rightDrawer";
 import { SearchBar } from "./searchbar";
 import { Grid } from "@mui/material";
-import Dropdown from "./dropdown";
 import CollapseTable from "./table";
 
 const menuItems = [
@@ -25,7 +24,7 @@ const menuItems = [
   },
 ];
 
-export const MainContent = () => {
+export const MainContent = ({openLeft}) => {
   const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -75,7 +74,7 @@ export const MainContent = () => {
           <div className="flex justify-start items-center">
             <Buttons
               text="BULK UPLOAD"
-              onClick={handleDrawerOpen} // Open drawer on button click
+              onClick={handleDrawerOpen}
               variant="text"
               className="!text-[12px] !font-semibold !text-[#0076DD]"
             />
@@ -131,14 +130,12 @@ export const MainContent = () => {
         </div>
 
         <div className="my-[20px] flex ">
-          <CollapseTable />
+          <CollapseTable openLeft={openLeft} openRight={open}/>
         </div>
       </div>
       <div>
         <RightDrawer open={open} handleDrawerClose={handleDrawerClose} />
       </div>
-
-      {/* Right Drawer */}
     </div>
   );
 };

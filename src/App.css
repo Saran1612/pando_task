@@ -95,7 +95,8 @@
   border-radius: 5px;
 }
 
-.search-bar.css-r5in8e-MuiInputBase-root-MuiInput-root::before{
+.search-bar.css-r5in8e-MuiInputBase-root-MuiInput-root::before,
+.search-bar.css-17tf9hn::before{
   border:none !important
 }
 

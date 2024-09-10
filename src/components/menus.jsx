@@ -59,7 +59,7 @@ export default function ReusableMenu({ buttonText, menuItems, bg }) {
     };
 
     return (
-        <div>
+        <div className='rounded-[20px]'>
             <Button
                 id="customized-button"
                 aria-controls={open ? 'customized-menu' : undefined}
@@ -70,7 +70,7 @@ export default function ReusableMenu({ buttonText, menuItems, bg }) {
                 onClick={handleClick}
                 endIcon={<KeyboardArrowDownIcon />}
                 sx={{ backgroundColor: `#${bg}`, color: "#616161" }}
-                className='!font-bold'
+                className='!font-bold !capitalize !rounded-[20px] !border menu-buttons '
             >
                 {buttonText}
             </Button>
@@ -85,7 +85,7 @@ export default function ReusableMenu({ buttonText, menuItems, bg }) {
             >
                 {menuItems.map((item, index) => (
                     <React.Fragment key={index}>
-                        <MenuItem onClick={() => { item.onClick(); handleClose(); }} disableRipple>
+                        <MenuItem onClick={() => { handleClose(); }} disableRipple>
                             {item.icon}
                             {item.label}
                         </MenuItem>

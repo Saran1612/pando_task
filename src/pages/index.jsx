@@ -18,7 +18,7 @@ export const Lane = () => {
                     <div class="vertical-line vertical-line_two"></div>
                     <Buttons
                         onClick={() => { }}
-                        className="text-[14px]"
+                        className="text-[14px] !bg-[#0076DD] !font-medium"
                         text="INITIATE EVENT"
                     />
                 </div>
@@ -27,8 +27,6 @@ export const Lane = () => {
             <div>
                 <MiniDrawer />
             </div>
-
-
         </div >
     )
 }

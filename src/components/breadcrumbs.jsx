@@ -12,7 +12,7 @@ export function Breadcrumbs({ items }) {
                                 {item.label}
                             </Link>
                         ) : (
-                            <span style={{ color: '#407EB2', fontWeight: "600" }}>{item.label}</span>
+                            <span style={{ color: '#005399', fontWeight: "600" }}>{item.label}</span>
                         )}
                         {index < items.length - 1 && (
                             <span style={{ margin: '0 8px', color: '#929292', fontWeight: "500" }}>{'>'}</span>

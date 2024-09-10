@@ -89,7 +89,15 @@
 }
 
 .border-dashed{
-  border: 1px dashed #B5C3CB;
+  border: 1.4px dashed #B5C3CB;
   padding: 10px 8px;
   border-radius: 5px;
+}
+
+.search-bar.css-r5in8e-MuiInputBase-root-MuiInput-root::before{
+  border:none !important
+}
+
+.menu-buttons{
+  border: 1px solid #EFEFEF !important;
 }
